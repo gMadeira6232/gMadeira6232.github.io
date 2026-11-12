@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #172b4d;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: grey;
+}
+
+.hero {
+  background-color: #142b49;
+  color: white;
+  padding: 60px 30px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hero h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 550px;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hero-texto {
+  flex: 1;
+  min-width: 0;
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3fd1ae;
+  border-radius: 8px;
+  color: #142b49;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.botao:hover {
+  background-color: #2cb89a;
+}
+
+.indicadores {
+    background-color: #F5F7FA;
+    padding: 60px 30px;
+}
+
+.indicadores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.indicador-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.indicador-card h3 {
+    color: #168C81;
+    font-size: 36px;
+}
+
+.indicador-card p {
+    color: #64748B;
+    font-size: 16px;
+}
+
+.cursos {
+    background-color: #E2E8F0;
+    padding: 60px 30px;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.curso-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1.5px solid #CBD5E1;
+    box-shadow: 0px 3px 10px rgb(134, 134, 134);
+}
+
+.curso-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.curso-card h3 {
+    color: #172B4D;
+    font-size: 22px;
+    
+}
+
+@media (max-width: 900px) {
+    .cursos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .indicadores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cursos-grid {
+    grid-template-columns: repeat(1, 1fr);
+ }
+}
