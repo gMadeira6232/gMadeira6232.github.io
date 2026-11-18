@@ -1,6 +1,6 @@
 import { indicadores, cursos, vagas, candidatos } from "./dados.js";
 
-const grid = document.querySelector(".indicadores-grid");
+const gridIndicadores = document.querySelector(".indicadores-grid");
 
 indicadores.forEach((indicador) => {
 	const card = document.createElement("div");
@@ -10,7 +10,7 @@ indicadores.forEach((indicador) => {
 	const titulo = document.createElement("p");
 	titulo.textContent = indicador.titulo;
 	card.append(valor, titulo);
-	grid.appendChild(card);
+	gridIndicadores.appendChild(card);
 });
 
 const gridCursos = document.querySelector(".cursos-grid");
@@ -55,7 +55,7 @@ cursos.forEach((curso) => {
 	rodapeCurso.className = "curso-rodape";
 	rodapeCurso.append(preco, matricula);
 
-	cardCurso.append(imagemCurso, nomeCurso, duracaoArea, inicio, fim, resumo, rodapeCurso,);
+	cardCurso.append(imagemCurso, nomeCurso, duracaoArea, inicio, fim, resumo, rodapeCurso);
 	gridCursos.appendChild(cardCurso);
 });
 
@@ -84,7 +84,7 @@ vagas.forEach((vaga) => {
 	const candidatura = document.createElement("a");
 	candidatura.textContent = "Quero me candidatar";
 	candidatura.className = "botao";
-	candidatura.href = "#vagas";
+	candidatura.href = "#oportunidades";
 
 	cardVaga.append(nomeVaga, localVaga, descricaoVaga, candidatura);
 	gridOportunidades.appendChild(cardVaga);
@@ -139,7 +139,6 @@ candidatos.forEach((candidato) => {
 	linkedin.textContent = "LinkedIn";
 	linkedin.href = candidato.redesSociais;
 	linkedin.target = "_blank";
-
 	contatoCandidato.append(linkedin);
 
 	const conectarCandidato = document.createElement("a");

@@ -30,10 +30,7 @@ html {
 	align-items: center;
 	gap: 10px;
 }
-.logo-icone {
-	width: 36px;
-	height: 36px;
-}
+.logo-icone { width: 36px; height: 36px; }
 .menu {
 	display: flex;
 	gap: 20px;
@@ -67,8 +64,7 @@ html {
 	margin-bottom: 30px;
 	max-width: 550px;
 }
-.hero-image,
-.hero-texto {
+.hero-image, .hero-texto {
     flex: 1;
     min-width: 0;
 }
@@ -105,24 +101,16 @@ html {
 	background-color: white;
 	color: #142b49;
 }
-.indicadores,
-.cursos,
-.oportunidades,
-.candidatos {
+.indicadores, .cursos, .oportunidades, .candidatos {
     padding: 60px 30px;
 }
-.cursos,
-.candidatos {
+.cursos, .candidatos {
     background-color: #e2e8f0;
 }
-.indicadores,
-.oportunidades {
+.indicadores, .oportunidades {
     background-color: #f5f7fa;
 }
-.indicadores-grid,
-.cursos-grid,
-.oportunidades-grid,
-.candidatos-grid {
+.indicadores-grid, .cursos-grid, .oportunidades-grid, .candidatos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -178,7 +166,7 @@ html {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 12px;
+	gap: 12px; flex-wrap: wrap;
 	border-top: 1px solid #cbd5e1;
 	margin: auto 20px 0;
 	padding: 16px 0 20px;
@@ -214,17 +202,9 @@ html {
 	line-height: 1.5;
 	margin: 0 0 12px;
 }
-.vaga-local {
-	display: flex;
-	align-items: center;
-	gap: 5px;
-}
-.icone-local {
-	width: 15px;
-	height: 15px;
-}
-.vaga-card .botao,
-.candidato-card .botao {
+.vaga-local { display: flex; align-items: center; gap: 5px; }
+.icone-local { width: 15px; height: 15px; }
+.vaga-card .botao, .candidato-card .botao {
     align-self: stretch;
     text-align: center;
     margin-top: 10px;
@@ -270,8 +250,7 @@ html {
 	color: #64748b;
 	text-decoration: none;
 }
-.candidato-contato a,
-.candidato-contato a:visited {
+.candidato-contato a, .candidato-contato a:visited {
 	color: #64748b;
 	text-decoration: none;
 }
@@ -293,17 +272,13 @@ html {
 	padding-bottom: 20px;
 	margin-bottom: 20px;
 }
-.candidato-info {
-	display: flex;
-	flex-direction: column;
-}
+.candidato-info { display: flex; flex-direction: column; }
 .rodape {
 	background-color: #12263f;
 	color: white;
 	padding: 20px 30px 1px;
 }
-.rodape h2,
-.rodape h3 {
+.rodape h2, .rodape h3 {
 	font-size: 18px;
 	margin: 0 0 10px;
 }
@@ -316,26 +291,55 @@ html {
 	justify-content: space-between;
 	gap: 40px;
 }
-.rodape-integrantes {
-	text-align: right;
-}
+.rodape-integrantes { text-align: right; }
 .rodape-final {
 	border-top: 1px solid #38516f;
 	padding-top: 12px;
 	text-align: center;
 	font-size: 13px;
 }
+.newsletter { margin: 10px 0 5px; }
+.newsletter input {
+    padding: 7px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+.newsletter button {
+    padding: 7px 16px;
+    background-color: #3fd1ae;
+    color: #12263f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.tabela-areas {
+    width: 100%;
+    border-collapse: separate;
+	border-spacing: 0;
+    margin-top: 25px;
+    background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.tabela-areas th, .tabela-areas td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #cbd5e1;
+}
+.tabela-areas th {
+    background-color: #12263f;
+    color: white;
+}
 @media (max-width: 900px) {
-	.cursos-grid,
-	.oportunidades-grid,
-	.candidatos-grid {
+	.cursos-grid, .oportunidades-grid, .candidatos-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.hero {
     	flex-direction: column;
 	}
-	.hero-image,
-	.hero-texto {
+	.hero-image, .hero-texto {
     	flex: none;
     	width: 100%;
 	}
@@ -343,7 +347,7 @@ html {
     	height: auto;
 	}
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 	.cabecalho {
 		flex-direction: column;
 		gap: 15px;
@@ -367,7 +371,7 @@ html {
 		font-size: 16px;
 	}
 	.hero-botoes {
-    gap: 10px;
+    	gap: 10px;
 	}
 	.hero-botoes .botao {
     	margin-top: 0;
@@ -382,9 +386,7 @@ html {
 	.curso-card .botao {
 		text-align: center;
 	}
-	.cursos-grid,
-	.oportunidades-grid,
-	.candidatos-grid {
+	.cursos-grid, .oportunidades-grid, .candidatos-grid {
 		grid-template-columns: repeat(1, 1fr);
 	}
 	.rodape-conteudo {
@@ -394,4 +396,5 @@ html {
 	.rodape-integrantes {
 		text-align: left;
 	}
+	.tabela-areas th, .tabela-areas td { padding: 8px 5px; font-size: 12px; }
 }
